@@ -1,0 +1,56 @@
+---
+title: 'Install Claude Code'
+description: 'Install the Claude Code CLI globally with npm'
+---
+
+<Info>
+  **Prerequisite** You should have Node.js (version 18 or higher) installed.
+</Info>
+
+## Install
+
+Install Claude Code globally with npm:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+## Verify the installation
+
+Confirm the CLI is available on your `PATH`:
+
+```bash
+claude --version
+```
+
+## Update
+
+To update to the latest version, run the install command again:
+
+```bash
+npm install -g @anthropic-ai/claude-code@latest
+```
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Permission errors (EACCES) on install">
+    Avoid running the install with `sudo`. Instead, configure npm to install
+    global packages to a directory you own, or use a Node version manager
+    like [nvm](https://github.com/nvm-sh/nvm), then re-run:
+
+    ```bash
+    npm install -g @anthropic-ai/claude-code
+    ```
+  </Accordion>
+  <Accordion title="`claude` command not found">
+    Make sure npm's global `bin` directory is on your `PATH`. You can find it
+    with:
+
+    ```bash
+    npm bin -g
+    ```
+
+    Add the printed directory to your shell's `PATH` and open a new terminal.
+  </Accordion>
+</AccordionGroup>
